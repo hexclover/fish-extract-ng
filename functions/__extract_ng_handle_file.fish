@@ -14,7 +14,7 @@ function __extract_ng_handle_file
     else if test (count $toks) -gt 2
         and test $toks[-2] = tar
         and test -n $toks[-3]
-        and contains $toks[-1] gz bz2 zstd
+        and contains $toks[-1] bz2 gz xz zstd
         # Basename is XXX.tar.YYY
         set suffix (string join . $toks[-2..-1])
     else
