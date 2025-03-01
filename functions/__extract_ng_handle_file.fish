@@ -50,10 +50,10 @@ function __extract_ng_handle_file
                 __extract_ng_traced tar Jxvf $realpath
                 set err $status
             case tar.zstd
-                __extract_ng_traced tar xvf --zstd $file
+                __extract_ng_traced tar xvf --zstd $realpath
                 set err $status
             case zip
-                __extract_ng_traced unzip $file
+                __extract_ng_traced unzip $realpath
                 set err $status
             case '*'
                 echo "$file: Unrecognized suffix: `$suffix'" > /dev/stderr
